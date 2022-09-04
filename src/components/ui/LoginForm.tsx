@@ -3,20 +3,19 @@ import { useState } from 'react';
 import { Box, Button, Container, Grid, Paper, TextField, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-type User = {
+type UserProps = {
     email: string;
     pwd: string;
 };
 
 export const LoginForm: React.FC = () => {
-    const [loginData, setLoginData] = useState<User>({
+    const [loginData, setLoginData] = useState<UserProps>({
         email: '',
         pwd: '',
     });
 
     const handleLoginData = (event: React.ChangeEvent<HTMLInputElement>) => {
         setLoginData({ ...loginData, [event.target.name]: event.target.value });
-        console.log(loginData);
     };
 
     const handleSubmit = (event: React.FormEvent<HTMLInputElement>) => {
@@ -58,11 +57,9 @@ export const LoginForm: React.FC = () => {
                                 required
                                 onChange={handleLoginData}
                             />
-                            <Link to="/">
-                                <Button fullWidth type="submit" sx={{ mt: 1, mb: 2.5 }} variant="contained">
-                                    Login
-                                </Button>
-                            </Link>
+                            <Button fullWidth type="submit" sx={{ mt: 1, mb: 2.5 }} variant="contained">
+                                Login
+                            </Button>
                         </Box>
                     </Paper>
                 </Grid>

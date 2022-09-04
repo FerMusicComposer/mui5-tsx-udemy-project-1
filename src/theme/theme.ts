@@ -6,6 +6,7 @@ export const theme = createTheme({
         mode: 'dark',
         background: {
             default: themePalette.background,
+            paper: themePalette.dark1,
         },
         primary: {
             main: themePalette.primaryMain,
@@ -19,6 +20,31 @@ export const theme = createTheme({
             defaultProps: {
                 style: {
                     backgroundColor: themePalette.dark1,
+                },
+            },
+        },
+        MuiButton: {
+            defaultProps: {
+                style: {
+                    textTransform: 'none',
+                    boxShadow: 'none',
+                    borderRadius: '0.5em',
+                    background: themePalette.loginBackground,
+                    color: themePalette.primaryFontColor,
+                },
+            },
+        },
+        MuiAlert: {
+            defaultProps: {
+                style: {
+                    borderRadius: '0.8em',
+                    fontSize: '1em',
+                },
+            },
+            styleOverrides: {
+                standardError: {
+                    border: `1px solid ${themePalette.errorMain}`,
+                    background: themePalette.errorMainBG,
                 },
             },
         },
