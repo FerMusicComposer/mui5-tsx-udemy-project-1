@@ -1,11 +1,11 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import Header from './components/ui/Header';
+import { Navbar } from './components/ui/Navbar';
 
 export const RouterLayout: React.FC = () => {
     return (
         <>
-            <Header />
+            <Navbar />
             <Outlet />
         </>
     );

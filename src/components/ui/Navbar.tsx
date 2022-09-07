@@ -3,7 +3,7 @@ import { AppBar, Box, Toolbar, Container, Button, Stack, Typography } from '@mui
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-router-dom';
 
-const Header: React.FC = () => {
+export const Navbar: React.FC = () => {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="fixed">
@@ -28,5 +28,3 @@ const Header: React.FC = () => {
         </Box>
     );
 };
-
-export default Header;

@@ -2,6 +2,8 @@ import React from 'react';
 import { useState } from 'react';
 import { Box, Button, Container, Grid, Paper, TextField, Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { useNotification } from '../../context/NotificationContext';
+import { LoginValidate } from '../../utils/validateForm';
 
 type UserProps = {
     email: string;
@@ -9,6 +11,7 @@ type UserProps = {
 };
 
 export const LoginForm: React.FC = () => {
+    const { getError, getSuccess } = useNotification();
     const [loginData, setLoginData] = useState<UserProps>({
         email: '',
         pwd: '',
@@ -21,6 +24,14 @@ export const LoginForm: React.FC = () => {
     const handleSubmit = (event: React.FormEvent<HTMLInputElement>) => {
         event.preventDefault();
         console.log(loginData);
+
+        LoginValidate.validate(loginData)
+            .then(() => {
+                getSuccess('Login successful');
+            })
+            .catch(error => {
+                getError(error.message);
+            });
     };
 
     return (
@@ -45,7 +56,6 @@ export const LoginForm: React.FC = () => {
                                 type="email"
                                 label="Email"
                                 sx={{ mt: 2, mb: 1.5 }}
-                                required
                                 onChange={handleLoginData}
                             />
                             <TextField
@@ -54,7 +64,6 @@ export const LoginForm: React.FC = () => {
                                 type="password"
                                 label="Password"
                                 sx={{ mt: 1.5, mb: 1.5 }}
-                                required
                                 onChange={handleLoginData}
                             />
                             <Button fullWidth type="submit" sx={{ mt: 1, mb: 2.5 }} variant="contained">
