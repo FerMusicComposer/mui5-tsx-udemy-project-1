@@ -46,6 +46,10 @@ export const theme = createTheme({
                     border: `1px solid ${themePalette.errorMain}`,
                     background: themePalette.errorMainBG,
                 },
+                standardSuccess: {
+                    border: `1px solid ${themePalette.successMain}`,
+                    background: themePalette.successMainBG,
+                },
             },
         },
     },
