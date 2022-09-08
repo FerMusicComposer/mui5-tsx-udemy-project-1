@@ -1,9 +1,10 @@
 import React from 'react';
 import { AppBar, Box, Toolbar, Container, Button, Stack, Typography } from '@mui/material';
 import Grid from '@mui/material/Grid';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export const Navbar: React.FC = () => {
+    const navigate = useNavigate();
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="fixed">
@@ -11,14 +12,14 @@ export const Navbar: React.FC = () => {
                     <Container maxWidth="xl">
                         <Grid container direction="row" justifyContent="space-between" alignItems="center">
                             <Grid item>
-                                <Typography>LOGO</Typography>
+                                <Typography>YOURLOGO</Typography>
                             </Grid>
                             <Grid item>
                                 <Stack direction="row" spacing={1}>
-                                    <Link to="/login">
-                                        <Button variant="contained">Logout</Button>
-                                    </Link>
-                                    <Button variant="outlined">Register</Button>
+                                    <Button variant="contained" onClick={() => navigate('/login')}>
+                                        Logout
+                                    </Button>
+                                    <Button variant="outlined">Useless button</Button>
                                 </Stack>
                             </Grid>
                         </Grid>

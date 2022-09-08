@@ -1,9 +1,9 @@
 import React from 'react';
 import { useState } from 'react';
 import { Box, Button, Container, Grid, Paper, TextField, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
 import { useNotification } from '../../context/NotificationContext';
 import { LoginValidate } from '../../utils/validateForm';
+import { useNavigate } from 'react-router-dom';
 
 type UserProps = {
     email: string;
@@ -16,6 +16,7 @@ export const LoginForm: React.FC = () => {
         email: '',
         pwd: '',
     });
+    const navigate = useNavigate();
 
     const handleLoginData = (event: React.ChangeEvent<HTMLInputElement>) => {
         setLoginData({ ...loginData, [event.target.name]: event.target.value });
@@ -28,6 +29,7 @@ export const LoginForm: React.FC = () => {
         LoginValidate.validate(loginData)
             .then(() => {
                 getSuccess('Login successful');
+                navigate('/');
             })
             .catch(error => {
                 getError(error.message);

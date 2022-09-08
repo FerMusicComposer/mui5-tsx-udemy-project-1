@@ -1,8 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
 
+.container {
+    display: grid;
+    justify-content: center;
+    width: 100%;
+}
+
 .headline {
     margin-top: 5rem;
     font-size: xx-large;
     color: '#FCFAF1';
-    margin-left: 25rem;
+    align-self: center;
 }
