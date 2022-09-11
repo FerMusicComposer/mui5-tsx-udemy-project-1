@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Button } from '@mui/material';
 import { Header } from '../../components/ui/Header';
 import { useNotification } from '../../context/NotificationContext';
@@ -12,6 +12,7 @@ export const HomePage: React.FC = () => {
     const handleClickSuccess = () => {
         getSuccess(`Now everything's fine`);
     };
+
     return (
         <>
             <Header
