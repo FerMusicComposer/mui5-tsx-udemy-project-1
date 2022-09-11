@@ -4,6 +4,7 @@ import { Box, Button, Container, Grid, Paper, TextField, Typography } from '@mui
 import { useNotification } from '../../context/NotificationContext';
 import { LoginValidate } from '../../utils/validateForm';
 import { useNavigate } from 'react-router-dom';
+import { themePalette as tp } from '../../theme/themePalette';
 
 type UserProps = {
     email: string;
