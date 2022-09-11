@@ -17,10 +17,29 @@ export const lightTheme = createTheme({
     },
     direction: 'ltr',
     components: {
+        MuiContainer: {
+            defaultProps: {
+                style: {
+                    paddingLeft: '10px',
+                    paddingRight: '10px',
+                },
+            },
+        },
+        MuiTab: {
+            defaultProps: {
+                style: {
+                    textTransform: 'none',
+                    fontWeight: 700,
+                    fontSize: '1rem',
+                    minWidth: 10,
+                    marginLeft: '25px',
+                },
+            },
+        },
         MuiAppBar: {
             defaultProps: {
                 style: {
-                    backgroundColor: tp.grey300,
+                    backgroundColor: tp.arcOrange,
                 },
             },
         },
@@ -46,12 +65,12 @@ export const lightTheme = createTheme({
                 standardError: {
                     border: `1px solid ${tp.red50}`,
                     background: tp.lightErrorLight,
-                    color: tp.red50,
+                    color: tp.white,
                 },
                 standardSuccess: {
                     border: `1px solid ${tp.green50}`,
                     background: tp.lightSuccessLight,
-                    color: tp.teal50,
+                    color: tp.white,
                 },
             },
         },

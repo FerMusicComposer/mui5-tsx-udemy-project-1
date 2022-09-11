@@ -4,6 +4,11 @@ export enum themePalette {
     //Commons
     black = '#000000',
     white = '#ffffff',
+    loginBackground = '#2D7FA8',
+    navbar = '#A2A3F5',
+    dark1 = '#31314A',
+    arcBlue = '#0b72b9',
+    arcOrange = '#ffba60',
 
     //-------------------//
 
@@ -488,13 +493,4 @@ export enum themePalette {
     blueGrey700 = '#455a64',
     blueGrey800 = '#37474f',
     blueGrey900 = '#263238',
-
-    //-------------------//
-
-    //Component or style-specific custom colors
-    loginBackground = '#2D7FA8',
-    navbar = '#A2A3F5',
-    dark1 = '#31314A',
-
-    //...etc
 }

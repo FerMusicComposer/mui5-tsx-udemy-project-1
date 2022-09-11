@@ -17,6 +17,25 @@ export const darkTheme = createTheme({
     },
     direction: 'ltr',
     components: {
+        MuiContainer: {
+            defaultProps: {
+                style: {
+                    paddingLeft: '10px',
+                    paddingRight: '10px',
+                },
+            },
+        },
+        MuiTab: {
+            defaultProps: {
+                style: {
+                    textTransform: 'none',
+                    fontWeight: 700,
+                    fontSize: '1rem',
+                    minWidth: 10,
+                    marginLeft: '25px',
+                },
+            },
+        },
         MuiAppBar: {
             defaultProps: {
                 style: {

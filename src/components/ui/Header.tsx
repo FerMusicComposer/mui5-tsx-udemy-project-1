@@ -27,7 +27,9 @@ export const Header: React.FC<HeaderProps> = ({ title, description, element }) =
                             alignItems="center"
                         >
                             <Grid item>
-                                <Typography variant="h2">{title}</Typography>
+                                <Typography variant="h2" fontWeight="medium">
+                                    {title}
+                                </Typography>
                             </Grid>
                             <Grid item>
                                 <Typography sx={{ mt: 2 }}>{description}</Typography>
