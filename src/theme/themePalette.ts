@@ -68,8 +68,8 @@ export enum themePalette {
     //-------------------//
 
     //Light Palette Background
-    lightBackgroundPaper = '#ffffd8',
-    lightBackgroundDefault = '#ffffe8',
+    lightBackgroundPaper = '#ffffe8',
+    lightBackgroundDefault = '#fffff8',
 
     //-------------------//
 
